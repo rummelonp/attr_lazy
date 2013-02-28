@@ -1,6 +1,6 @@
 # AttrLazy
 
-TODO: Write a gem description
+Define an accessor to class that do lazy evaluation.
 
 ## Installation
 
@@ -18,7 +18,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'attr_lazy'
+
+class Foo
+  attr_lazy_reader :bar do
+    # high cost initializer
+  end
+  attr_lazy_accessor :baz do
+    # high cost initializer
+  end
+end
+```
 
 ## Contributing
 
@@ -27,3 +38,9 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Copyright
+
+Copyright (c) 2013 [Kazuya Takeshima](mailto:mail@mitukiii.jp). See [LICENSE][license] for details.
+
+[license]: LICENSE.md
